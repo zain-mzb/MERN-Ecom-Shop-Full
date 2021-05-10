@@ -11,12 +11,13 @@ var productsRouter = require("./routes/api/products");
 var config = require("config");
 var cors = require("cors");
 var app = express();
-app.use(cors());
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "jade");
 //keep it at top
 app.use('/', indexRouter);
+
+app.use(cors());
 
 
 // Serve static files from the React frontend app
